@@ -2,7 +2,7 @@ name: Notion to Slack Task Reminder
 
 on:
   schedule:
-    - cron: '6 23 * * *'  # 毎朝9時に実行
+    - cron: '12 23 * * *'  # 毎朝9時に実行
 
 jobs:
   send-tasks:
@@ -18,7 +18,7 @@ jobs:
           node-version: '18.x'
 
       - name: Install dependencies
-        run: npm install axios @notionhq/client
+        run: npm ci
 
       - name: Run script
         run: node index.js
