@@ -1,0 +1,29 @@
+name: Notion to Slack Task Reminder
+
+on:
+  schedule:
+    - cron: '33 18 * * *'  # 毎朝9時に実行
+
+jobs:
+  send-tasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm install axios @notionhq/client
+
+      - name: Run script
+        run: node index.js
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+a
