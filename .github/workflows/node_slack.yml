@@ -2,7 +2,7 @@ name: Notion to Slack Task Reminder
 
 on:
   schedule:
-    - cron: '32 23 * * *'  # 毎朝9時に実行
+    - cron: '35 14 * * *'  # 毎朝9時に実行
   workflow_dispatch:  # 手動トリガーの追加
 
 jobs:
