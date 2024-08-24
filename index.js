@@ -8,6 +8,7 @@ const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
 // NotionデータベースID
 const databaseId = process.env.NOTION_DATABASE_ID;
 
+
 (async () => {
     const today = new Date();
     const tomorrow = new Date(today);
