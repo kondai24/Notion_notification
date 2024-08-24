@@ -2,7 +2,7 @@ name: Notion to Slack Task Reminder
 
 on:
   schedule:
-    - cron: '33 18 * * *'  # 毎朝9時に実行
+    - cron: '54 22 * * *'  # 毎朝9時に実行
 
 jobs:
   send-tasks:
@@ -26,4 +26,3 @@ jobs:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-a
