@@ -1,7 +1,6 @@
 const { Client } = require('@notionhq/client');
 const axios = require('axios');
 const dotenv = require('dotenv');
-
 // .envファイルの環境変数を読み込む
 dotenv.config();
 // 環境変数からNotionとSlackのAPIキーを取得
